@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 20170522232624) do
     t.string   "animal_type"
     t.integer  "shelter_id"
     t.string   "avitar"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "has_spotlight"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "shelters", force: :cascade do |t|

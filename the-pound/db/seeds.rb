@@ -8,4 +8,9 @@
 
 shelter = Shelter.create({name: "PAWS Chicago", address: " 1997 N Clybourn Ave, Chicago, IL 60614", phone_number: "773-935-7297"})
 
-shelter.animals.create({name: "Chase", animal_type: "Canine", avitar: "http://lorempixel.com/200/200/animals/" })
+shelter.animals.create({name: "Chase", animal_type: "Canine", avitar: "http://lorempixel.com/200/200/animals/", has_spotlight: false })
+shelter.animals.create({name: "Cody", animal_type: "Cat", avitar: "http://lorempixel.com/200/200/animals/", has_spotlight: false })
+shelter.animals.create({name: "BILLY", animal_type: "Canine", avitar: "http://lorempixel.com/200/200/animals/", has_spotlight: true })
+shelter.animals.create({name: "Chance", animal_type: "Canine", avitar: "http://lorempixel.com/200/200/animals/", has_spotlight: true })
+shelter.animals.create({name: "Kitty", animal_type: "Cat", avitar: "http://lorempixel.com/200/200/animals/", has_spotlight: true })
+shelter.animals.create({name: "HairBall", animal_type: "Cat", avitar: "http://lorempixel.com/200/200/animals/", has_spotlight: false })

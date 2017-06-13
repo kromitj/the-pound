@@ -5,6 +5,7 @@ class CreateAnimals < ActiveRecord::Migration[5.0]
     	t.string :animal_type
     	t.integer :shelter_id
     	t.string :avitar
+        t.boolean :has_spotlight
     	
     	t.timestamps
     end
