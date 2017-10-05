@@ -1,22 +1,5 @@
-<h2>Spotlight Cuties</h2>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Shelter</th>
-  </tr>
- 
-<% @animals.each do |animal| %>
-  <tr>
-    <td><%= link_to animal.name, animal %></td>
-    <td><%= animal.animal_type %></td>
-    <td><%= animal.shelter.name %></td>
-  </tr>
-<% end %>
-</table>
-
-
+<%= render "animals/animals-spotlight" %>
 <h2>Let's find these cuties a home</h2>
 
 <%= link_to "See some Cuties", animals_path %>
+gem 'devise', '~> 4.2'
