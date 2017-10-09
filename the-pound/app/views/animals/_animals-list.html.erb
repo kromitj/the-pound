@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Shelter</th>
+  </tr>
+ 
+  <% @animals.each do |animal| %>
+    <tr>
+      <td><%= link_to animal.name, animal %></td>
+      <td><%= animal.animal_type %></td>
+      <td><%= link_to animal.shelter.name, animal.shelter %></td>
+    </tr>
+  <% end %>
+</table>

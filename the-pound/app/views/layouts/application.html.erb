@@ -11,6 +11,8 @@
   <body>
     <%= react_component("Chat") %>
   	<%=render partial: '/layouts/navbar' %>
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
