@@ -1,0 +1,2 @@
+class ShelterAdmin < ApplicationRecord
+end
