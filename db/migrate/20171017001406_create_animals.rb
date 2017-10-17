@@ -6,6 +6,7 @@ class CreateAnimals < ActiveRecord::Migration[5.0]
     	t.string :name
     	t.string :age_in_months
     	t.string :animal_type
+    	t.string :breed
     	t.string :sex
     	t.boolean :declawed
     	t.string :size

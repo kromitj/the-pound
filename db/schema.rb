@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017001406) do
+ActiveRecord::Schema.define(version: 20171017005855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,12 +46,21 @@ ActiveRecord::Schema.define(version: 20171017001406) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "animal_breeds", force: :cascade do |t|
+    t.integer  "animal_id"
+    t.integer  "breed_id"
+    t.string   "breed_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "animals", force: :cascade do |t|
     t.integer  "shelter_id"
     t.integer  "adoption_id"
     t.string   "name"
     t.string   "age_in_months"
     t.string   "animal_type"
+    t.string   "breed"
     t.string   "sex"
     t.boolean  "declawed"
     t.string   "size"
@@ -62,6 +71,12 @@ ActiveRecord::Schema.define(version: 20171017001406) do
     t.string   "picture"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "breeds", force: :cascade do |t|
+    t.string   "breed_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "companies", force: :cascade do |t|
