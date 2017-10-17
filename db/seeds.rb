@@ -13,10 +13,12 @@ puts "---------- created Users **************"
 
 company = Company.create(address: "blah", name: "IBM", main_contact: person.id)
 person.update(company_id: company.id)
-puts "person: #{person}"
 puts "---------- created Company **************"
 
-# shelter = Shelter.create()
-# ShelterAdmin.create!({admin_user_id: admin.id, user_id: person.id})
+ shelter = Shelter.create(name: "Anti-Cruelty Society", address: "157 West Grand Ave., Chicago, IL 60654")
+puts "---------- created Shelter **************"
 
-# puts "---------- created User **************"
+ShelterAdmin.create!({admin_user_id: admin.id, user_id: person.id, shelter_id: shelter.id})
+puts "---------- created ShelterAdmin **************"
+
+Animal.create(shelter_id: shelter.id, adoption_id: 36218658, name: "Tony", age_in_months: 96, animal_type: "Canine", sex: "male", declawed: false, size: "Large", weight: 35, is_spayed_or_nudered: true, adoption_fee: 150, picture: "https://placeimg.com/640/480/animals", desc: "Hello! My name is Tony and I've recently become available for adoption. The staff is getting to know me and will soon be posting more information - so check back or better yet, visit me at The Anti-Cruelty Society!")
